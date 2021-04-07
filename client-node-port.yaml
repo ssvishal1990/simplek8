@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-node-ports
+spec:
+  type: NodePort
+  ports: 
+    - port: 3050 # this port will be used bby another pod to access the container inside our current pod
+      targetPort: 3000 # it is the port inside our pod to which we will route any traffic
+      nodePort: 31515 # we will use this port to access the application in our pod :: For ex --> we will use it as :: localhost:nodePort in browser
+  selector:
+    component: web

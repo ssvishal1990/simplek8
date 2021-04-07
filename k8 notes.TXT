@@ -1,0 +1,25 @@
+pods :
+ 
+A Pod (as in a pod of whales or pea pod) is a group of one or more containers, with shared storage and network resources, and a specification for how to run the containers. A Pod's contents are always co-located and co-scheduled, and run in a shared context. A Pod models an application-specific "logical host": it contains one or more application containers which are relatively tightly coupled. In non-cloud contexts, applications executed on the same physical or virtual machine are analogous to cloud applications executed on the same logical host.
+
+
+
+Services: 
+
+An abstract way to expose an application running on a set of Pods as a network service.
+With Kubernetes you don't need to modify your application to use an unfamiliar service discovery mechanism. Kubernetes gives Pods their own IP addresses and a single DNS name for a set of Pods, and can load-balance across them.
+
+Different types of services
+
+--> Cluster IP 
+
+--> Node Port
+
+--> Load Balancer
+
+--> ingress
+
+
+Feed a config file to K8
+
+--> kubectl apply -f <path to the config>
